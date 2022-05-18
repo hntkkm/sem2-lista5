@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.third.HelloController">
+   <left>
+      <Pane prefHeight="450.0" prefWidth="200.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar layoutY="14.0" prefHeight="55.0" prefWidth="200.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Figura">
+                  <items>
+                        <MenuItem fx:id="chooseDowolne" mnemonicParsing="false" onAction="#drawDowolne" text="Dowolne" />
+                        <MenuItem fx:id="chooseLinia" mnemonicParsing="false" onAction="#drawLinia" text="Linia" />
+                        <MenuItem fx:id="chooseKolo" mnemonicParsing="false" onAction="#drawKolo" text="Kolo" />
+                        <MenuItem fx:id="chooseTrojkat" mnemonicParsing="false" onAction="#drawTrojkat" text="Trojkat" />
+                        <MenuItem fx:id="chooseKwadrat" mnemonicParsing="false" onAction="#drawKwadrat" text="Kwadrat" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ColorPicker fx:id="chooseColor" layoutX="-1.0" layoutY="140.0" prefHeight="72.0" prefWidth="202.0">
+               <value>
+                  <Color />
+               </value>
+            </ColorPicker>
+            <Label layoutX="33.0" layoutY="154.0" prefHeight="44.0" prefWidth="135.0" text="Wybierz kolor">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane fx:id="drawPlace" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
